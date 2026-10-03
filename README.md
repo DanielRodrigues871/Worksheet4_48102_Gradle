@@ -44,7 +44,7 @@ Antes, o JAR só tinha as classes do FleetCheck e não tinha `Main-Class`, por i
 O pressuposto de que cada máquina tem o Gradle instalado, no PATH e numa versão compatível. A versão fica fixada em `gradle/wrapper/gradle-wrapper.properties` e é descarregada automaticamente, por isso todos (incluindo o CI) usam a mesma versão.
 
 **Evidence 8.5 – GitHub Actions (Gradle)**
-_(URL do run a preencher)_
+Run com sucesso: https://github.com/DanielRodrigues871/Worksheet4_48102_Gradle/actions/runs/37139231511 (artefacto `fleetcheck-gradle-build` anexado).
 
 **Evidence 8.6 – Porque é que o SBOM do Gradle tem dependências que não escrevi?**
 Pela mesma razão que no Maven: o plugin CycloneDX percorre o grafo de dependências resolvido pelo Gradle (`runtimeClasspath`), incluindo as transitivas `jackson-core` e `jackson-annotations`, e não só a `jackson-databind` declarada no `build.gradle`.
